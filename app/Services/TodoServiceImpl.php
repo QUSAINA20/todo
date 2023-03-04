@@ -17,7 +17,7 @@ class TodoServiceImpl implements ServicesTodoService
 
     public function all(): array
     {
-        return $this->todoRepository->all()->toArray();
+        return $this->todoRepository->all()->sortByDesc('created_at')->toArray();
     }
 
     public function get($id): ?array

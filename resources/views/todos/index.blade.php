@@ -13,6 +13,8 @@
                                     <th>Title</th>
                                     <th>Description</th>
                                     <th>Status</th>
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -29,6 +31,8 @@
                                             <span class="badge badge-warning">Incomplete</span>
                                         @endif
                                     </td>
+                                    <td>{{ $todo['start_time'] }}</td>
+                                    <td>{{ $todo['end_time'] }}</td>
                                     <td>
                                         <div class="btn-group" role="group" aria-label="Todo Actions">
                                             <a href="{{ route('todos.show', $todo['id']) }}" class="btn btn-info">View</a>

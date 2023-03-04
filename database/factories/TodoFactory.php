@@ -19,7 +19,9 @@ class TodoFactory extends Factory
         return [
             'title' => $this->faker->sentence,
             'description' => $this->faker->paragraph,
-            'completed' => $this->faker->boolean
+            'completed' => $this->faker->boolean,
+            'start_time' => $this->faker->dateTimeBetween('now', '+1 week'),
+            'end_time' => $this->faker->dateTimeBetween('+1 week', '+2 week'),
         ];
     }
 }

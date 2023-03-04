@@ -15,6 +15,14 @@
                                 <span class="badge badge-warning">Incomplete</span>
                             @endif
                         </p>
+                        <div>
+                            <strong>Start Time:</strong>
+                            {{ $todo['start_time'] }}
+                        </div>
+                        <div>
+                            <strong>End Time:</strong>
+                            {{ $todo['end_time'] }}
+                        </div>
                         <a href="{{ route('todos.index') }}" class="btn btn-primary">Back to Todo List</a>
                     </div>
                 </div>

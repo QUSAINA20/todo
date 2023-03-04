@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Todo extends Model
 {
-    protected $fillable = ['title', 'description', 'completed'];
+    protected $fillable = ['title', 'description', 'completed', 'start_time', 'end_time'];
     use HasFactory;
 }

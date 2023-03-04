@@ -27,6 +27,8 @@ class TodoRequest extends FormRequest
             'title' => 'required|max:255',
             'description' => 'required|string',
             'completed' => 'nullable|boolean',
+            'start_time' => ['required', 'date_format:Y-m-d'],
+            'end_time' => ['required', 'date_format:Y-m-d', 'after:start_time'],
         ];
     }
 }
